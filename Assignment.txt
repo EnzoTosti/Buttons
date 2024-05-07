@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Examples</title>
+<style>
+  /* Common Button Styles */
+  .button {
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 15px;
+      font-size: 16px;
+      cursor: pointer;
+  }
+
+  /* Uber Button */
+  .uber-button {
+      background-color: black; /* Changed to black */
+      opacity: 0.8; /* Opacity effect */
+      position: relative;
+  }
+
+  .uber-button:before {
+      content: '';
+      position: absolute;
+      top: 5px; /* Adjust as needed */
+      left: 5px; /* Adjust as needed */
+      width: calc(100% - 10px); /* Adjust as needed */
+      height: calc(100% - 10px); /* Adjust as needed */
+      background-color: grey; /* Grey background */
+      border-radius: 6px; /* Smaller oval shape */
+      z-index: -1; /* Behind the button text */
+  }
+
+  .uber-button span {
+      position: relative;
+      z-index: 1; /* Above the oval background */
+  }
+
+  .uber-button:hover {
+      opacity: 1;
+  }
+
+  /* Amazon Button */
+  .amazon-button {
+      background-color: yellow; /* Changed to yellow */
+      color: black; /* Font color changed to black */
+      padding: 15px 40px; /* Adjusted padding */
+      border-radius: 50px; /* Oval shape */
+      transition: background-color 0.3s; /* Transition effect */
+  }
+
+  .amazon-button:hover {
+      background-color: #FFC726; /* Lighter shade on hover */
+  }
+
+  /* GitHub Button */
+  .github-button {
+      background-color: green; /* Changed to green */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  }
+
+  .github-button:hover {
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
+  }
+</style>
+</head>
+<body>
+
+<button class="button uber-button"><span>Request now</span></button>
+<button class="button amazon-button">Add to Cart</button>
+<button class="button github-button">Sign up</button>
+
+</body>
+</html>
